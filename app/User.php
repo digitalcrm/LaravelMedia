@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
+
 class User extends Authenticatable extends HasMedia
 {
     use Notifiable, HasMediaTrait;
