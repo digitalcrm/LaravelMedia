@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//syntax for accessing view file without controller Route::view('urlname','views file name'); 
+Route::view('profile','profile')->name('profile');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

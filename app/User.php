@@ -9,7 +9,7 @@ use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 
-class User extends Authenticatable extends HasMedia
+class User extends Authenticatable implements HasMedia
 {
     use Notifiable, HasMediaTrait;
 
