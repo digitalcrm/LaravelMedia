@@ -68,6 +68,7 @@ class User extends Authenticatable implements HasMedia
     */
     public function avatar()
     {
+        //return $this->hasOne(Media::class, 'localkey','foriegn key');
         return $this->hasOne(Media::class, 'id','avatar_id');
     }
     /*
@@ -75,6 +76,7 @@ class User extends Authenticatable implements HasMedia
     */
     public function getAvatarUrlAttribute()
     {
+        //this is for profile pic at the top 
         return $this->avatar->getUrl('thumb');
     }
 }

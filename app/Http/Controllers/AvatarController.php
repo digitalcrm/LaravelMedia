@@ -72,7 +72,11 @@ class AvatarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //return $id;
+        $user = auth()->user();
+        $user->avatar_id= $request->selectedAvatar;
+        $user->save();
+        return redirect()->back();
     }
 
     /**
