@@ -46,6 +46,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof FileUnacceptableForCollection) {
+            return redirect()->back()->with('error','Only jpeg file accepted here');
+        }
         return parent::render($request, $exception);
     }
 }

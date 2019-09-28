@@ -6,7 +6,7 @@ Route::get('/', function () {
 });
 
 //syntax for accessing view file without controller Route::view('urlname','views file name'); 
-Route::view('profile','profile')->name('profile');
+Route::get('profile','AvatarController@index')->name('profile');
 
 //create resource controller
 Route::resource('avatar','AvatarController');
